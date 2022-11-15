@@ -3,7 +3,6 @@ package client.gdb;
 import client.ProcessClient;
 import com.far.net.interf.IProcessAgent;
 import constans.QuestPacket;
-import constans.Request;
 import constans.types.luanch.LaunchMessage;
 import constans.types.next.NextMessage;
 import constans.types.setBreakpoints.SetBreakpointsMessage;
