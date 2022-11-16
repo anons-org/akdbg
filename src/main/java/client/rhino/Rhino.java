@@ -22,8 +22,14 @@ public class Rhino extends ProcessClient implements IClient {
 
     @Override
     public void launchRequest(LaunchMessage launchMessage, IProcessAgent<SessionManager.SessionAgent> sessionAgent) {
-        int x=0;
+
        // sessionAgent.sendMessage(JSON.toJSONString(response));
+
+        //需要修改response 的Body
+
+
+
+
     }
 
     @Override
