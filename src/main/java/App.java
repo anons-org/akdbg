@@ -1,5 +1,5 @@
 
-import client.rhino.Rhino;
+import client.demo.Demo;
 import com.far.net.interf.IProcessAgent;
 import com.far.net.interf.IProcessHandler;
 import com.far.net.server.core.FarSockServer;
@@ -69,7 +69,7 @@ public class App {
 
                 IProcessAgent<SessionManager.SessionAgent> sessionAgent =  sessionManager.getSesssionAgent(id);
 
-                IClient client = new Rhino();
+                IClient client = new Demo();
                 client.onRequest(questType,request,sessionAgent);
 
             }

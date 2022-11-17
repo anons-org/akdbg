@@ -1,19 +1,20 @@
-package client.rhino;
+package client.demo;
 
 import client.ProcessClient;
 import com.far.net.interf.IProcessAgent;
 import constans.QuestPacket;
-import constans.Request;
+import constans.types.breakpointLocations.BreakPointLocationMessage;
 import constans.types.luanch.LaunchMessage;
 import constans.types.next.NextMessage;
 import constans.types.setBreakpoints.SetBreakpointsMessage;
 import constans.types.setFunctionBreakPoints.SetFunctionBreakPointsMessage;
+import constans.types.setInstructionBreakpoints.SetInstructionBreakpointsMessage;
 import helps.SessionManager;
 import interf.IClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Rhino extends ProcessClient implements IClient {
+public class Demo extends ProcessClient implements IClient {
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
     @Override
     public void onRequest(int type, String msg, IProcessAgent<SessionManager.SessionAgent> sessionAgent) {
@@ -28,8 +29,6 @@ public class Rhino extends ProcessClient implements IClient {
         //需要修改response 的Body
 
 
-
-
     }
 
     @Override
@@ -39,6 +38,16 @@ public class Rhino extends ProcessClient implements IClient {
 
     @Override
     public void setFunctionBreakPointsRequest(SetFunctionBreakPointsMessage setFunctionBreakPointsMessage,  IProcessAgent<SessionManager.SessionAgent> sessionAgent) {
+
+    }
+
+    @Override
+    public void breakpointLocationsRequest(BreakPointLocationMessage breakPointLocationMessage, IProcessAgent<SessionManager.SessionAgent> sessionAgent) {
+
+    }
+
+    @Override
+    public void setInstructionBreakpointsRequest(SetInstructionBreakpointsMessage setInstructionBreakpointsMessage, IProcessAgent<SessionManager.SessionAgent> sessionAgent) {
 
     }
 
